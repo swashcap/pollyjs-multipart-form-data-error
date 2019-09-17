@@ -15,11 +15,13 @@ module.exports.uploadFile = filename => {
    * {@link https://github.com/request/request#multipartform-data-multipart-form-uploads}
    */
   const formData = {
-    options: {
-      contentType: mime.getType(ext),
-      filename: base
-    },
-    value: fs.createReadStream(filename)
+    upload: {
+      options: {
+        contentType: mime.getType(ext),
+        filename: base
+      },
+      value: fs.createReadStream(filename)
+    }
   }
 
   return request('http://localhost:3001', { formData })
