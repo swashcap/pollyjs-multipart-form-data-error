@@ -9,7 +9,9 @@
   "private": true,
   "devDependencies": {
     "@babel/preset-env": "^7.6.0",
+    "@pollyjs/adapter-node-http": "^2.6.2",
     "@pollyjs/core": "^2.6.2",
+    "@pollyjs/persister-fs": "^2.6.2",
     "babel-jest": "^24.9.0",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
@@ -22,5 +24,10 @@
   "prettier": {
     "semi": false,
     "singleQuote": true
+  },
+  "dependencies": {
+    "mime": "^2.4.4",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
   }
 }
