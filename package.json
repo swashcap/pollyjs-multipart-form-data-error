@@ -11,13 +11,15 @@
     "@pollyjs/adapter-node-http": "^2.6.2",
     "@pollyjs/core": "^2.6.2",
     "@pollyjs/persister-fs": "^2.6.2",
+    "execa": "^2.0.4",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
-    "setup-polly-jest": "^0.5.2"
+    "setup-polly-jest": "^0.5.2",
+    "wait-for-localhost": "^3.2.0"
   },
   "scripts": {
     "format": "prettier --write '*.js' 'src/**/*.js'",
-    "test": "jest"
+    "test": "NODE_ENV=test jest"
   },
   "prettier": {
     "semi": false,

@@ -47,3 +47,5 @@ if (require.main === module) {
     console.log(`Server listening on ${port}`)
   })
 }
+
+module.exports.app = app
