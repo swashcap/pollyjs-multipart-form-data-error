@@ -6,5 +6,15 @@
   "repository": "git@github.com:swashcap/pollyjs-multipart-form-data-error.git",
   "author": "Cory Reed",
   "license": "Apache-2.0",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "scripts": {
+    "format": "prettier --write 'src/**/*.js'"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
 }
