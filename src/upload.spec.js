@@ -1,10 +1,10 @@
-import AdapterNodeHTTP from '@pollyjs/adapter-node-http'
-import PersisterFS from '@pollyjs/persister-fs'
-import { Polly } from '@pollyjs/core'
-import path from 'path'
-import { setupPolly } from 'setup-polly-jest'
+const AdapterNodeHTTP = require('@pollyjs/adapter-node-http')
+const PersisterFS = require('@pollyjs/persister-fs')
+const { Polly } = require('@pollyjs/core')
+const path = require('path')
+const { setupPolly } = require('setup-polly-jest')
 
-import { uploadFile } from './index'
+const { uploadFile } = require('./upload')
 
 Polly.register(AdapterNodeHTTP)
 Polly.register(PersisterFS)

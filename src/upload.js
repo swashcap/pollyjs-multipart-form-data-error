@@ -1,9 +1,9 @@
-import fs from 'fs'
-import mime from 'mime'
-import path from 'path'
-import request from 'request-promise-native'
+const fs = require('fs')
+const mime = require('mime')
+const path = require('path')
+const request = require('request-promise-native')
 
-export const uploadFile = filename => {
+module.exports.uploadFile = filename => {
   if (!filename) {
     throw new Error('Expected a `filename` argument')
   }
