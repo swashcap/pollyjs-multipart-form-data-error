@@ -29,9 +29,8 @@ describe('multipart/form-data request', () => {
     persister: 'fs'
   })
 
-  it('should upload a file', () => {
-    const response = uploadFile(path.join(__dirname, 'fixtures/kittens.jpg'))
-
-    expect(response).resolves.toBeTruthy()
-  })
+  it('should upload a file', () =>
+    uploadFile(path.join(__dirname, 'fixtures/kittens.jpg')).then(response => {
+      expect(response).toBeTruthy()
+    }))
 })
