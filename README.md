@@ -27,10 +27,10 @@ yarn test
 The tests currently fail:
 
 ```shell
-~/dev/pollyjs-multipart-form-data-error$ yarn --silent test
+$ yarn --silent test
  FAIL  src/upload.spec.js
   multipart/form-data request
-    ✕ should upload a file (126ms)
+    ✕ should upload a file (132ms)
 
   ● multipart/form-data request › should upload a file
 
@@ -45,7 +45,7 @@ The tests currently fail:
 
   ● multipart/form-data request › should upload a file
 
-    PollyError: [Polly] [persister:fs] Cannot persist response for [GET] http://localhost:3001/ because the status code was 400 and `recordFailedRequests` is `false`
+    PollyError: [Polly] [persister:fs] Cannot persist response for [POST] http://localhost:3001/upload because the status code was 400 and `recordFailedRequests` is `false`
 
       at Object.assert (node_modules/@pollyjs/utils/src/utils/assert.js:5:11)
       at FSPersister.assert (node_modules/@pollyjs/persister/src/index.js:175:5)
@@ -54,7 +54,7 @@ The tests currently fail:
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        0.999s, estimated 1s
+Time:        1.009s, estimated 2s
 Ran all test suites.
 error Command failed with exit code 1.
 ```

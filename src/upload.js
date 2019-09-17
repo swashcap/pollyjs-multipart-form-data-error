@@ -24,5 +24,9 @@ module.exports.uploadFile = filename => {
     }
   }
 
-  return request('http://localhost:3001', { formData })
+  return request({
+    formData,
+    method: 'POST',
+    uri: 'http://localhost:3001/upload'
+  })
 }
